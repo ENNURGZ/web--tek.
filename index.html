@@ -1,57 +1,80 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<html >
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GİRİŞ YAP</title>
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-
-<link rel="stylesheet" type="text/css" href="girişyapsayfası.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANA SAYFA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="webanasayfam.css" />
 </head>
-
-
 <body>
 
-
-    <div class="giris-form">
-        <div class="box">
-        <form action="girişyapsayfası.php" method="post">
-         <h2 class="text-center">GİRİŞ YAPIN</h2>
-           
-        <div class="form-group">
-            <input type="email" class="form-control" id="Username" name="Username" placeholder="Username(Username@sakarya.edu.tr)*" required="required">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" id="Password" name="Password" placeholder="Password*" required="required">
-            <div class="display-4" id="hatalışifre"></div>
-        </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-dark btn-block btn-sm active" onclick="kontrol()">GİRİŞ</button>
-        </div>  
-        <div class="display-4 text-danger small" id="hatalı"></div>
-</form>
-</div>
+    <!--ÜSTBİLGİ-->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary menü">
+            <div class="container-fluid">
+                <a class="navbar-brand disabled text-white">ENNUR GÜRBÜZ</a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="girişyapsayfası.html" class="nav-item nav-link active text-dark-50">GİRİŞ YAP</a>
+                        <a href="iletişimsayfam.html" class="nav-item nav-link active text-dark-50" tabindex="-1">İLETİŞİM</a>                      
+                    </div>
+                    <div class="navbar-nav ms-auto">
+                        <a href="webanasayfam.html" class="nav-item nav-link active text-dark-50">ANA SAYFA</a>
+                        <a href="özgeçmişsayfası.html" class="nav-item nav-link active text-dark-50">ÖZGEÇMİŞİM</a>
+                        <a href="şehrimsayfası-1.html" class="nav-item nav-link active text-dark-50">ŞEHRİM</a>
+                        <a href="mirasımızsayfası.html" class="nav-item nav-link active text-dark-50">MİRASIMIZ</a> 
+                        <a href="ilgialanlarım.html" class="nav-item nav-link active text-dark-50">İLGİ ALANLARIM</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
-   
+    <!--ANA SAYFA RESMİM-->
+    <div class="container-flu "> 
+        <img class="img-fluid w-100"  src="anasayfa.jpg">
+    </div>
+
+    <!--İÇERİK-->
+
+    <h1 class="display-4">HAKKIMDA</h1>
+        <p class="lead" id="yazi">
+           Ben Ennur Gürbüz.Web siteme hoşgeldiniz.Bu web sitesini web teknolojileri dersim için hazırladım.Ankarada doğdum.19 yaşındayım.İstanbulda yaşıyorum.Hayatım ve okul yıllarım Ankara,Malatya,Tekirdağ,İstanbul ve Sakarya şehirlerinde geçti.Sakarya Üniversitesi Bilgisayar Mühendisliği 1.Sınıf Öğrencisiyim Çok farklı spor dallarıyla ilgilenme şansım oldu. Şu anda yüzme ile ilgileniyorum.Yazılım alanında kendimi geliştiriyorum.Dil alanında ilerleyebilmek için ingilizce kursuna gidiyorum.Hayatıma, kendime ve insanlara yararlı bir birey olarak devam edeceğim.
+          </p>
+          <h1 class="display-4">HOBİLERİM</h1>
+
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-6 ">
+                    <p class="lead" >Yüzmek</p>
+                    <img class="imf-fluid küçükresimler" src="yüzme.jpg">
+                  </div>
+                  <div class="col-6">
+                    <p class="lead" >Film İzlemek</p>
+                    <img class="imf-fluid küçükresimler" src="film.jpg" >
+                  </div>
+              </div>
+          </div>
 
 
- <script>
-function kontrol()
-{ 
-  if(username!="b211210060@sakarya.edu.tr" || password!="b211210060")
-  {
-      document.getElementById("hatalı").innerHTML= "YanlIş Kullanıcı Adı veya Şifre Girdiniz.";
-  }
-  else{}
-  }
+          <footer class="bg-secondary text-black-50 mt-3">
+              ENNUR GÜRBÜZ 2022
+        </footer>
 
- </script>   
+
+
+
+
+
+
+
+
+
+    
 </body>
-</html>  
+</html>
